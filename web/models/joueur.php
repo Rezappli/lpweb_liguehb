@@ -2,13 +2,6 @@
 
 require_once('database.php');
 
-/**
- * Récupération de tous les commentaires d'un post
- *
- * @author Fabien Bellanger
- * @param int $postId   ID du post
- * @return array
- */
 function getCommentsOfPost(int $postId): array
 {
     $comments = [];

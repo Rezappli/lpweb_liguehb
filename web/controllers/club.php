@@ -2,13 +2,6 @@
 
 require_once('models/club.php');
 
-/**
- * Liste des commentaires d'un post
- *
- * @author Fabien Bellanger
- * @param int $postId   ID du post
- * @return void
- */
 function getCommentsOfPostController(int $postId): void
 {
     if ($postId <= 0)

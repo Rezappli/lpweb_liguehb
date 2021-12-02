@@ -2,12 +2,6 @@
 
 require_once('database.php');
 
-/**
- * Récupération de tous les posts
- *
- * @author Fabien Bellanger
- * @return array
- */
 function getAllPosts(): array
 {
     $posts = [];

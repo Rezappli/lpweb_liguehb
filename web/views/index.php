@@ -1,8 +1,7 @@
 <?php include_once('header.php'); ?>
 
-<main role="main" class="container">    
+<main class="container">    
     <div>
-    <?php if ($clubs && count($clubs) > 0) { ?>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -19,16 +18,14 @@
             <tbody>
             <?php foreach ($clubs as $club) { ?>
                 <tr>
-                    <th scope="row"><?php echo $post['id'] ?></th>
-                    <td><?php echo $post['title'] ?></td>
-                    <td><?php echo $post['description'] ?></td>
-                    <td><?php echo $post['active'] ? 'Oui' : 'Non' ?></td>
-                    <td><?php echo $post['created_at'] ?></td>
+                    <td><?php echo $club['num'] ?></td>
+                    <td><?php echo $club['club'] ?></td>
+                    <td><?php echo $club['licencies']?></td>
+                    <td><?php echo $club['categorie'] ?></td>
                 </tr>
             <?php } ?>
             </tbody>
         </table>
-    <?php } ?>
     </div>
 </main>
 

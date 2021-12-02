@@ -2,13 +2,6 @@
 
 require_once('database.php');
 
-/**
- * Récupération de tous les commentaires d'un post
- *
- * @author Fabien Bellanger
- * @param int $postId   ID du post
- * @return array
- */
 function getAllIndex(): array
 {
     $clubs = [];
@@ -19,15 +12,20 @@ function getAllIndex(): array
         return $clubs;
     }
 
-    // Query
-    // -----
     try
     {
-        $sql = 'SELECT * FROM club';
-        $stmt = $pdo->query($sql);
-        while ($club = $stmt->fetch()) {
-            array_push($clubs, $club);
+        $query = 'SELECT club.id as num, ville as club, categorie.nom as categorie, COUNT(joueur.id_licence) as licencies
+                FROM club 
+                JOIN joueur ON joueur.id_club = club.id 
+                JOIN categorie ON joueur.id_categorie = categorie.id 
+                GROUP BY num, ville, joueur.id_categorie;';
+        $stmt = $pdo->prepare($query);
+        $stmt->execute();
+        while($row = $stmt->fetch()){
+            echo $row['num'];
+
         }
+    
     }
     catch(PDOException $e)
     {
