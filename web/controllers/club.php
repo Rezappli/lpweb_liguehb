@@ -1,7 +1,6 @@
 <?php
 
-require_once('models/comments.php');
-require_once('models/posts.php');
+require_once('models/club.php');
 
 /**
  * Liste des commentaires d'un post

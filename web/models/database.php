@@ -10,12 +10,12 @@ function initDatabse(): ?PDO
 {
     try
     {
-        $host     = 'http://dbs.lpweb-lannion.fr:4480/';
+        $host     = 'dbs.lpweb-lannion.fr';
         $username = 'mathis';
         $password = 'taWnLZn5';
         $name     = 'mathis';
     
-        return new PDO("mysql:host=$host;dbname=$name", $username, $password);
+        return new PDO("mysql:host=$host;port=3306;dbname=$name", $username, $password);
     }
     catch (PDOException $e)
     {

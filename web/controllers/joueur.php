@@ -1,6 +1,6 @@
 <?php
 
-require_once('models/posts.php');
+require_once('models/joueur.php');
 
 /**
  * Liste des posts
