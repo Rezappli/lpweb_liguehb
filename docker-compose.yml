@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  php:
+    container_name: liguehb-php
+    hostname: liguehb-php
+    build: .
+    restart: "unless-stopped"
+    depends_on: 
+      - mysql
+    ports:
+      - 8090:80
+    volumes:
+      - ./web:/var/www/html
+    networks:
+      - liguehb-net
+
+  mysql:
+    container_name: liguehb-mysql
+    image: mysql:5.7
+    restart: "unless-stopped"
+    volumes:
+      - ./web:/mysql
+    env_file:
+      - .env
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+    networks:
+      - liguehb-net
+
+networks:
+  liguehb-net:
