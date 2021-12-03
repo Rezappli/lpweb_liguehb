@@ -14,7 +14,7 @@ function getAllIndex(): array
 
     try
     {
-        $query = 'SELECT club.id as num, ville as club, categorie.nom as categorie, COUNT(joueur.id_licence) as licencies
+        $query = 'SELECT club.id as num, ville as club, categorie.id as idCateg, categorie.nom as categorie, COUNT(joueur.id_licence) as licencies
                 FROM club 
                 JOIN joueur ON joueur.id_club = club.id 
                 JOIN categorie ON joueur.id_categorie = categorie.id 
@@ -22,8 +22,7 @@ function getAllIndex(): array
         $stmt = $pdo->prepare($query);
         $stmt->execute();
         while($row = $stmt->fetch()){
-            echo $row['num'];
-
+            array_push($clubs,$row);
         }
     
     }
