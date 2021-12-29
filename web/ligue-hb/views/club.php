@@ -32,7 +32,7 @@
                         </td>
                         <td>
                             <a href="joueur.php?id=<?=$joueur['idJoueur']?>">
-                                <?= $joueur['prenomJoueur'] ?><?= $joueur['nom'] ?>
+                                <?= $joueur['prenomJoueur'] ?><?= $joueur['nomJoueur'] ?>
                             </a>
                         </td>
                     </tr>

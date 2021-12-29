@@ -11,38 +11,45 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th colspan="4"><h1>Ligue de Bretagne de Handball - Comité 22</h1></th>
+                    <th><img src="<?= $joueur['img'] ?>" height="200" alt=" <?= $joueur['nom'] ?>"></th>
+                    <th><h1 class="text-center">Club de Handball de <?= $joueur['ville'] ?> <br> Catégorie "<?= $joueur['nomCategorie'] ?>"</h1></th>
                 </tr>
-                <tr>
-                    <th scope="col">Nom</th>
-                    <th scope="col">Prénom</th>
-                    <th scope="col">Date naissance</th>
-                    <th scope="col">email</th>
-                    <th scope="col">Licence</th>
-                </tr>
+            
             </thead>
 
             <tbody>
-            <?php foreach ($joueurs as $joueur) { ?>
+            
                     <tr>
+                        <th scope="col">Nom</th>
                         <td>
-                            <?= $club['nom'] ?>
+                            <?= $joueur['nom'] ?>
                         </td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Prénom</th>
                         <td>
-                            <?= $club['prenom'] ?>
+                            <?= $joueur['prenom'] ?>
                         </td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Date naissance</th>
                         <td>
-                            <?= $club['naissance']?>
+                            <?= $joueur['naissance']?>
                         </td>
+                    </tr>
+                    <tr>
+                        <th scope="col">email</th>
                         <td>
-                            <?= $club['email'] ?>
+                            <?= $joueur['email'] ?>
                         </td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Licence</th>
                         <td>
-                            <?= $club['licence'] ?>
+                            <?= $joueur['licence'] ?>
                         </td>
                     </tr>
                 </a>
-            <?php } ?>
             </tbody>
         </table>
     </div>

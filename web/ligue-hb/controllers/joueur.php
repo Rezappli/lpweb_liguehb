@@ -4,7 +4,7 @@ require_once('models/joueur.php');
 
 function getPlayerController($id): void
 {
-    if ($id != "")
+    if ($id == "")
     {
         echo 'Invalid player';
         die();
@@ -12,7 +12,7 @@ function getPlayerController($id): void
 
     // Recherche du club en base de données
     // ------------------------------------
-    $club = getPlayer($id);
+    $joueur = getPlayer($id);
 
     require_once('views/joueur.php');
 }
