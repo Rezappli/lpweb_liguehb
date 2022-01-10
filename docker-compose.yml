@@ -10,4 +10,38 @@ services:
       - 8090:80
     volumes:
       - ./web:/var/www/html
+    networks:
+      - bridge
+
+
+  mysql:
+    container_name: liguehb-mysql
+    image: mysql:5.7
+    restart: "unless-stopped"
+    volumes:
+      - ./data_mysql:/var/lib/mysql
+    env_file:
+      - .env
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    networks:
+      - bridge
+
+  phpmyadmin:
+    container_name: liguehb-phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    restart: "unless-stopped"
+    ports:
+      - 8091:80
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=${MYSQL_USER}
+      - PMA_PASSWORD=${MYSQL_PASSWORD}
+    networks:
+      - bridge
+
+networks:
+  bridge:
 

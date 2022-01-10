@@ -11,8 +11,8 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th><img src="<?= $joueur['img'] ?>" height="200" alt=" <?= $joueur['nom'] ?>"></th>
-                    <th><h1 class="text-center">Club de Handball de <?= $joueur['ville'] ?> <br> Catégorie "<?= $joueur['nomCategorie'] ?>"</h1></th>
+                    <th><img src="<?= $joueur['img'] ?>" width="200" alt=" <?= $joueur['nom'] ?>"></th>
+                    <th><h1 class="text-center">Club de Handball de <?= utf8_encode($joueur['ville']) ?> <br> Catégorie "<?= utf8_encode($joueur['nomCategorie']) ?>"</h1></th>
                 </tr>
             
             </thead>
@@ -22,25 +22,25 @@
                     <tr>
                         <th scope="col">Nom</th>
                         <td>
-                            <?= $joueur['nom'] ?>
+                            <?= utf8_encode($joueur['nom']) ?>
                         </td>
                     </tr>
                     <tr>
                         <th scope="col">Prénom</th>
                         <td>
-                            <?= $joueur['prenom'] ?>
+                            <?= utf8_encode($joueur['prenom']) ?>
                         </td>
                     </tr>
                     <tr>
                         <th scope="col">Date naissance</th>
                         <td>
-                            <?= $joueur['naissance']?>
+                            <?= utf8_encode($joueur['naissance'])?>
                         </td>
                     </tr>
                     <tr>
                         <th scope="col">email</th>
                         <td>
-                            <?= $joueur['email'] ?>
+                            <?= utf8_encode($joueur['email']) ?>
                         </td>
                     </tr>
                     <tr>

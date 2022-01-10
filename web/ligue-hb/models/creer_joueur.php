@@ -14,7 +14,7 @@ function getClubs(): array
 
     try
     {
-        $query = 'SELECT club.id as num, ville as club
+        $query = 'SELECT club.id as id, ville as club
                 FROM club;';
         $stmt = $pdo->prepare($query);
         $stmt->execute();
@@ -43,7 +43,7 @@ function getCategories(): array
 
     try
     {
-        $query = 'SELECT categorie.id as idCateg, categorie.nom as categorie 
+        $query = 'SELECT categorie.id as id, categorie.nom as nom 
                 FROM categorie;';
         $stmt = $pdo->prepare($query);
         $stmt->execute();

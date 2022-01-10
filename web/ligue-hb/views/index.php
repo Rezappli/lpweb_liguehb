@@ -6,7 +6,8 @@
         width:100%;
     }
 </style>
-<main class="container">    
+<main class="container"> 
+<a href="creer_joueur.php" class="btn btn-primary m-3"> Ajouter un joueur</a>   
     <div>
         <table class="table table-striped">
             <thead>
@@ -26,22 +27,22 @@
                     <tr>
                         <td>
                             <a href="club.php?id=<?=$club['num']?>&categ=<?=$club['idCateg']?>">
-                                <?= $club['num'] ?>
+                                <?= utf8_encode($club['num']) ?>
                             </a>
                         </td>
                         <td>
                             <a href="club.php?id=<?=$club['num']?>&categ=<?=$club['idCateg']?>">
-                                <?= $club['club'] ?>
+                                <?= utf8_encode($club['club']) ?>
                             </a>
                         </td>
                         <td>
                             <a href="club.php?id=<?=$club['num']?>&categ=<?=$club['idCateg']?>">
-                                <?= $club['licencies']?>
+                                <?= utf8_encode($club['licencies'])?>
                             </a>
                         </td>
                         <td>
                             <a href="club.php?id=<?=$club['num']?>&categ=<?=$club['idCateg']?>">
-                                <?= $club['categorie'] ?>
+                                <?= utf8_encode($club['categorie']) ?>
                             </a>
                         </td>
                     </tr>

@@ -13,7 +13,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th colspan="4"><h1>Club de Handball de <?=$club[0]['ville']?> - <?=$club[0]['idCateg']?></h1></th>
+                    <th colspan="4"><h1>Club de Handball de <?=$club[0]['ville']?> - <?=utf8_encode($club[0]['categ'])?></h1></th>
                 </tr>
                 <tr>
                     <th scope="col">ID</th>
@@ -27,12 +27,12 @@
                     <tr>
                         <td>
                             <a href="joueur.php?id=<?=$joueur['idJoueur']?>">
-                                <?= $joueur['idJoueur'] ?>
+                                <?= utf8_encode($joueur['idJoueur']) ?>
                             </a>
                         </td>
                         <td>
                             <a href="joueur.php?id=<?=$joueur['idJoueur']?>">
-                                <?= $joueur['prenomJoueur'] ?><?= $joueur['nomJoueur'] ?>
+                                <?= utf8_encode($joueur['prenomJoueur'])." " ?><?= utf8_encode($joueur['nomJoueur']) ?>
                             </a>
                         </td>
                     </tr>
