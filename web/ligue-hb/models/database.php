@@ -4,7 +4,7 @@ function initDatabse(): ?PDO
 {
     try
     {
-        $host     = 'dbs.lpweb-lannion.fr';
+        $host     = 'liguehb-mysql';
         $password = 'taWnLZn5';
         $name     = 'mathis';
     
