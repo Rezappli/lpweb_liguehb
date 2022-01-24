@@ -6,12 +6,12 @@
         width:100%;
     }
 </style>
-<main class="container">    
+<main class="container-fluid">    
     <div>
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th><img src="<?= $joueur['img'] ?>" width="200" alt=" <?= $joueur['nom'] ?>"></th>
+                    <th><img class="rounded-circle " src="<?= $joueur['img'] ?>" width="150" height="150" alt=" <?= $joueur['nom'] ?>"></th>
                     <th><h1 class="text-center">Club de Handball de <?= utf8_encode($joueur['ville']) ?> <br> Catégorie "<?= utf8_encode($joueur['nomCategorie']) ?>"</h1></th>
                 </tr>
             

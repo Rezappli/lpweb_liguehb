@@ -8,7 +8,7 @@
     }
 </style>
 
-<main class="container">    
+<main class="container-fluid">    
     <div>
         <table class="table table-striped">
             <thead>

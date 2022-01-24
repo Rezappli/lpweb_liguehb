@@ -6,8 +6,7 @@
         width:100%;
     }
 </style>
-<main class="container"> 
-<a href="creer_joueur.php" class="btn btn-primary m-3"> Ajouter un joueur</a>   
+<main class="container-fluid"> 
     <div>
         <table class="table table-striped">
             <thead>
